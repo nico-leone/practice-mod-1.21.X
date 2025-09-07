@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "practicemod",
+	"version": "${version}",
+	"name": "practice mod",
+	"description": "Practice mod by nleoon",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/nico-leone/PracticeMinecraftMod-1.21.X"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/practicemod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.nleon.practicemod.PracticeMod"
+		],
+		"fabric-datagen": [
+			"net.nleon.practicemod.PracticeModDataGenerator"
+		],
+		"client": [
+			"net.nleon.practicemod.practicemodClient"
+		]
+	},
+	"mixins": [
+		"practicemod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
