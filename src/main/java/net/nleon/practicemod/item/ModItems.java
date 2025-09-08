@@ -11,6 +11,7 @@ import net.nleon.practicemod.PracticeMod;
 
 public class ModItems {
     public static final Item PRACTICE_ITEM = registerItem("practice_item", new Item(new Item.Settings()));
+    public static final Item PRACTICE_ITEM_BLUE = registerItem("practice_item_blue", new Item(new Item.Settings()));
 
 
     private static Item registerItem(String name,Item item) {
@@ -22,6 +23,8 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PRACTICE_ITEM);
+            entries.add(PRACTICE_ITEM_BLUE);
         });
+
     }
 }
