@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class PracticeMod implements ModInitializer {
-	public static final String MOD_ID = "practicemod";
+	public static final String MOD_ID = "tetomod";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override

@@ -1,11 +1,11 @@
 {
 	"schemaVersion": 1,
-	"id": "practicemod",
+	"id": "tetomod",
 	"version": "${version}",
-	"name": "practice mod",
-	"description": "Practice mod by nleoon",
+	"name": "Explding Kasane Teto",
+	"description": "Adds the Exploding Teto item to the game.",
 	"authors": [
-		"Me!"
+		"nleon"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",

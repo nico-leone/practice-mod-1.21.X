@@ -16,12 +16,13 @@ public class ThrownBombRenderer extends FlyingItemEntityRenderer<ThrownBombEntit
     @Override
     public void render(ThrownBombEntity entity, float yaw, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
         matrices.push();
-
+        //calculate a spin value based on age to create the wobble effect when thrown through the air
+        //increase the size of the doll at a small exponential scale so it increases in size through the air
         float age = entity.age + tickDelta;
         float ageSeconds = age / 5.0F;
         float spin = age * 20.0F;
         float scale = (float)Math.pow(1.3, ageSeconds);
-        scale = Math.min(scale, 30.0F);
+        scale = Math.min(scale, 12.0F);
 
 
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(spin));

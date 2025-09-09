@@ -10,9 +10,6 @@ import net.minecraft.util.Identifier;
 import net.nleon.practicemod.PracticeMod;
 
 public class ModItems {
-    public static final Item PRACTICE_ITEM = registerItem("practice_item", new Item(new Item.Settings()));
-    public static final Item PRACTICE_ITEM_BLUE = registerItem("practice_item_blue", new Item(new Item.Settings()));
-
     public static final Item BOMB = registerItem("exploding_teto", new BombItem(new Item.Settings()));
 
 
@@ -23,9 +20,7 @@ public class ModItems {
     public static void registerModItems() {
         PracticeMod.LOGGER.info("Registering ModItems" + PracticeMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(PRACTICE_ITEM);
-            entries.add(PRACTICE_ITEM_BLUE);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(BOMB);
         });
 
