@@ -13,6 +13,8 @@ public class ModItems {
     public static final Item PRACTICE_ITEM = registerItem("practice_item", new Item(new Item.Settings()));
     public static final Item PRACTICE_ITEM_BLUE = registerItem("practice_item_blue", new Item(new Item.Settings()));
 
+    public static final Item BOMB = registerItem("exploding_teto", new BombItem(new Item.Settings()));
+
 
     private static Item registerItem(String name,Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(PracticeMod.MOD_ID, name), item);
@@ -24,6 +26,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PRACTICE_ITEM);
             entries.add(PRACTICE_ITEM_BLUE);
+            entries.add(BOMB);
         });
 
     }
