@@ -32,13 +32,20 @@ public class ThrownBombEntity extends ThrownItemEntity {
         super.onCollision(hitResult);
 
         if(!this.getWorld().isClient){
+
+            //increased power depending on distance thrown
+            float power = 3.0F + (this.age / 5.0F);
+            power = Math.min(power, 50.0F);
+
+
             this.getWorld().createExplosion(this,
-                    this.getX(), this.getY(), this.getZ(), 10.0F,
+                    this.getX(), this.getY(), this.getZ(), power,
                     World.ExplosionSourceType.TNT
             );
             this.discard();
         }
     }
+
 
 
 
